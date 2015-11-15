@@ -1,1 +1,1 @@
-git pull gps master
+git pull svetomag master
