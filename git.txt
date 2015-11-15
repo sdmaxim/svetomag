@@ -13,3 +13,10 @@ git push svetomag master
 git pull svetomag master
 
 git config --global http.proxy http://username:password@cproxy.xxx.com.ua:3128
+
+git rm -r css
+git rm -r jq
+git rm -r spa.js
+git rm -r spa.shell.js
+git rm -r spa-mysql.js
+git rm -r index.html
