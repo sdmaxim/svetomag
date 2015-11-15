@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	h1 SvetoMAG
+
+	script(src = "js/jq/jquery-2.1.3.js")
+	script(src = "js/jq/taffydb-2.7.2.js")
+	script(src = "js/main.js")
+
+	#header
+		#loginForm(class = "login")
+		#searchForm
+			input#search(type = "search", placeholder = "Enter category ID")
+		#miniCart
+			#miniCartText
+			#emptyMiniCart(class = "cartButton") Очистить
+	#left
+	#main
+		#products
+	#footer footer

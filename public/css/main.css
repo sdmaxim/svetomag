@@ -1,0 +1,153 @@
+body {
+  padding: 5px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+ul {
+	display: block;
+	margin-left: -40px;
+}
+
+* {
+	float: left;
+	border-radius:5px;
+	margin: 5px;
+}
+
+#header {
+	width: 100%;
+	border: solid 1px #888888;
+}
+
+#search {
+	text-align: center;
+	width:500px;
+	height: 40px;
+	font-size:2em;
+	border: solid 1px #888888;
+}
+
+#left {
+	width: 238px;
+	border: solid 1px #888888;
+}
+
+#main {
+	width: 70%;
+	border: solid 1px #888888;
+}
+
+#footer {
+	width: 100%;
+	border: solid 1px #888888;
+}
+
+.cell {
+	font-size: 12px;
+	vertical-align: top;
+	padding: 3px;
+	border: 1px solid #A5A5A5;
+	background: none repeat scroll 0px 0px #FFF;
+	width: 380px;
+	margin: 1px 1px 1px 2px;
+}
+
+.cell_description {
+	width: 168px;
+	border-left: 1px solid #AAA;
+	padding: 5px;
+	text-align: center;
+}
+
+.product_name, .product_desc {
+	line-height: 100%;
+	text-align: left;
+	color:#91734B;
+}
+
+.product_desc {
+	color:#646478;
+}
+
+.product_id {
+	text-decoration: none;
+}
+
+.cell_image {
+	width: 160px;
+	text-align: center;
+	padding: 5px;
+}
+
+.cartButton, .loginButton, .cartButton:hover {
+	width:130px;
+	height:32px;
+	font-size: 22px;
+	text-align: center;
+	cursor: pointer;
+	padding-top: 5px;
+	margin: 5px auto;
+}
+
+.cartButton {
+	background-color: #45ff31;
+	background: linear-gradient(to top, #45ff31, #FEFEFE);
+	background: -webkit-linear-gradient(bottom, #45ff31, #FEFEFE);
+	background: -o-linear-gradient(bottom, #45ff31, #FEFEFE);
+	background: -ms-linear-gradient(bottom, #45ff31, #FEFEFE);
+	background: -moz-linear-gradient(bottom, #45ff31, #FEFEFE);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FEFEFE', endColorstr='#45ff31');
+	border:1px solid #45ff31;
+	color: #888888;
+}
+
+.loginButton {
+	background-color: #FF3B36;
+	background: linear-gradient(to top, #FF3B36, #FEFEFE);
+	background: -webkit-linear-gradient(bottom, #FF3B36, #FEFEFE);
+	background: -o-linear-gradient(bottom, #FF3B36, #FEFEFE);
+	background: -ms-linear-gradient(bottom, #FF3B36, #FEFEFE);
+	background: -moz-linear-gradient(bottom, #FF3B36, #FEFEFE);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FEFEFE', endColorstr='#FF3B36');
+	border:1px solid #FF3B36;
+	color: #888888;
+}
+
+.mainLevel, .mainLevel:hover {
+	display: block;
+	height: 30px;
+	width: 220px;
+	text-align:left;
+	cursor: pointer;
+	margin: 1px;
+	padding-top: 5px;
+	padding-left: 4px;
+}
+
+.mainLevel {
+	color:#646464;
+	background-color: #ECECEC;
+	background-image: linear-gradient(to top, #E4E4E4, #FFF 100%);
+	background-image: -webkit-linear-gradient(bottom, #E4E4E4, #FFF 100%);
+	background-image: -o-linear-gradient(bottom, #E4E4E4, #FFF 100%);
+	background-image: -ms-linear-gradient(bottom, #E4E4E4, #FFF 100%);
+	background-image: -moz-linear-gradient(bottom, #E4E4E4, #FFF 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#E4E4E4');
+	border: 1px solid #BABABA;
+}
+
+.mainLevel:hover, .cartButton:hover, .loginButton:hover {
+	color:#000064;
+	background-color: #D7DCFF;
+	background-image: linear-gradient(to top, #C7CDFF, #FFF 100%);
+	background-image: -webkit-linear-gradient(bottom, #C7CDFF, #FFF 100%);
+	background-image: -o-linear-gradient(bottom, #C7CDFF, #FFF 100%);
+	background-image: -ms-linear-gradient(bottom, #C7CDFF, #FFF 100%);
+	background-image: -moz-linear-gradient(bottom, #C7CDFF, #FFF 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#C7CDFF');
+	border: 1px solid #7584FF;
+}

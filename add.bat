@@ -1,0 +1,10 @@
+git add db
+git add node_modules
+git add public
+git add routes
+git add views
+git add push.bat
+git add pull.bat
+git add git.txt
+git add app.js
+git add add.bat
