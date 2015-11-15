@@ -1,1 +1,1 @@
-git pull svetomag master
+git pull svetomag master 

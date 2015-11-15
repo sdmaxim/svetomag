@@ -9,7 +9,6 @@ git commit -m 'version'
 git remote add svetomag https://github.com/sdmaxim/svetomag.git
 
 git push svetomag master
-
 git pull svetomag master
 
 git config --global http.proxy http://username:password@cproxy.xxx.com.ua:3128

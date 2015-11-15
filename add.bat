@@ -4,6 +4,7 @@ git add -A public
 git add -A routes
 git add -A views
 git add -A .idea
+
 git add -A push.bat
 git add -A pull.bat
 git add -A git.txt
