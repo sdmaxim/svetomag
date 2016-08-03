@@ -1,0 +1,18 @@
+{ 
+	"id" 				: "#menubar",
+	"category" 	: "info",
+	"type" 			: "list",
+	"position"	: "top",
+	"isAnim"		: true,
+	"show"			: true,
+	"list" : [
+		{	"name" : "Главная",	"url"	: ""},
+		{	"name" : "О нас",		"url"	: "o-nas.html"},
+		{	"name" : "Контакты",	"url"	: "kontakty.html"}
+	],
+	"animation" : {	"up" 		: {	"font-size"   :"180%",
+					          					"line-height" :"190%"},
+								"down" 		: { "font-size"   :"135%",
+															"line-height" :"250%"},
+								"cssLevel" :  "ul li a"}
+}

@@ -1,0 +1,11 @@
+<div class="module-header">
+	<h3>ШОУ ПРОГРАММА</h3>
+</div>
+<ul class="leftmenu">
+  <li ng-repeat="menuItem in $ctrl.menuItems">
+  	<a class="menuitem" href="#!/{{$ctrl.category}}/{{menuItem.url}}">
+  		<span class="text">{{menuItem.name}}</span>
+  	</a>
+  </li>
+</ul>
+<div class="module-footer"></div>

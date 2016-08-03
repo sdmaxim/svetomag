@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Authentication Example
+  body
+    h1 Login
+    | Try accessing 
+    a(href='/restricted') /restricted
+    | , then authenticate with "tj" and "foobar".
+    form(method='post', action='/login')
+      p
+        label Username:
+        input(type='text', name='username')
+      p
+        label Password:
+        input(type='text', name='password')
+      p
+        input(type='submit', value='Login')
+    a(href='/') home

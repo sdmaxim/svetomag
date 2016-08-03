@@ -1,0 +1,21 @@
+{ 
+	"category" 	: "stati",
+	"list" : [
+		{	"name" : "Свадьба",										"url"	: "svadba.html",							"img"	:  "svadba.jpg"},
+		{	"name" : "Детский День Рождения",			"url"	: "detskii_birthday.html",		"img"	:  "detskii-dr.jpg"},
+		{	"name" : "Оригинальные поздравления",	"url"	: "orig_podarki.html",				"img"	:  "orig-podarki.jpg"},
+		{	"name" : "Новый Год",									"url"	: "new_year.html",						"img"	:  "novij-god-2.jpg"},
+		{	"name" : "Юбилей",										"url"	: "ubiley.html",							"img"	:  "ubiley.jpg"},
+		{	"name" : "Встреча из роддома",				"url"	: "vstrecha_iz_roddoma.html",	"img"	:  "vstrecha-iz-roddoma.jpg"},
+		{	"name" : "Корпоратив",								"url"	: "korporativ.html",					"img"	:  "korporativ.jpg"},
+		{	"name" : "Открытие ТРЦ, Промо акции",	"url"	: "otkritie_trc.html",				"img"	:  "otkritie-tc.jpg"},
+		{	"name" : "Хеллоуин",									"url"	: "halloween.html",						"img"	:  "helloween.jpg"},
+		{	"name" : "Свидание, признание",				"url"	: "svidanie.html",						"img"	:  "svidanie.jpg"},
+		{	"name" : "Выпускной",									"url"	: "vipusknoi.html",						"img"	:  "vipusknoi.jpg"},
+		{	"name" : "Предвыборные, PR акции",		"url"	: "predvibornaja.html",				"img"	:  "predvibornaja.jpg"},
+		{	"name" : "Пикник",										"url"	: "picknic.html",							"img"	:  "piknik3.jpg"},
+		{	"name" : "Новоселье",									"url"	: "novoselie.html",						"img"	:  "novoselie.jpg"},
+		{	"name" : "1 сентября",								"url"	: "1_september.html",					"img"	:  "1_sent_2.jpg"},
+		{	"name" : "Пасха",											"url"	: "pasha.html",								"img"	:  "pasha.jpg"}
+	]
+}

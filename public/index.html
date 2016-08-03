@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="ru" ng-app="gulliverApp">
+<head>
+
+	<title>Студия праздников</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="index, follow" />
+	<meta name="title" content="Студия праздников" />
+	<meta name="description" content="Медведи белые по вызову Киев, Украина, Москва" />
+	<meta name="keywords" content="Студия, гулливер, праздник" />
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="main.css" type="text/css" />
+	<!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
+	
+	<script src="angular/jquery.min.js"></script>
+	<script src="angular/angular.min.js"></script>
+	<script src="angular/angular-animate.min.js"></script>
+	<script src="angular/angular-resource.min.js"></script>
+	<script src="angular/angular-route.min.js"></script>
+
+	<script type="text/javascript" src="gulliver-m.js"></script>
+	<script type="text/javascript" src="core/core-m.js"></script>
+	<script type="text/javascript" src="core/getdata/getdata-m.js"></script>
+	<script type="text/javascript" src="core/getdata/getdata-s.js"></script>
+
+	<link rel="stylesheet" href="slideshow/slideshow.css" type="text/css">
+	<script type="text/javascript" src="slideshow/slideshow-m.js"></script>
+	<script type="text/javascript" src="slideshow/slideshow-c.js"></script>
+
+	<link rel="stylesheet" href="nav-menu/top-menu.css" type="text/css" />
+	<link rel="stylesheet" href="nav-menu/left-menu.css" type="text/css" />
+	<link rel="stylesheet" href="nav-menu/middle-menu.css" type="text/css" />
+	<script type="text/javascript" src="nav-menu/nav-menu-m.js"></script>
+	<script type="text/javascript" src="nav-menu/nav-menu-c.js"></script>
+
+	<link rel="stylesheet" href="middle/style.css" type="text/css" />
+	<script type="text/javascript" src="middle/middle-m.js"></script>
+	<script type="text/javascript" src="middle/middle-c.js"></script>
+
+	<link rel="stylesheet" href="middle/content/content.css" type="text/css" />
+	<script type="text/javascript" src="middle/content/content-m.js"></script>
+	<script type="text/javascript" src="middle/content/content-c.js"></script>
+
+</head>
+
+<body>
+	<div class="page-body" align="center">
+		<div class="main">
+			<div class="header">
+				<div class="logo">
+					<div class="logo-text-big">ГУЛЛИВЕР</div>
+					<div class="logo-text-small">Студия праздников</div>
+				</div>
+				<div class="page-title">Превращаем маленькие события в БОЛЬШИЕ!</div>
+				<div class="phones">
+					<div class="phones-text">(044) 223-46-19</div>
+					<div class="phones-text">(050) 339-00-90</div>
+					<div class="phones-text">(097) 011-66-77</div>
+				</div>
+			</div>
+			<nav-menu menu-type="top-menu"></nav-menu>
+			<nav-menu menu-type="left-menu" class="leftcol"></nav-menu>
+			<div ng-view class="content"></div>
+		</div>
+	</div>
+</body>
+</html>

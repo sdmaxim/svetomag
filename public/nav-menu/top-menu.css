@@ -1,0 +1,42 @@
+.menubar{
+	width:auto;
+	height: 40px;
+	clear:both;
+	position:relative;
+	margin:0;
+	padding:0 10px 0 40px;
+	border-radius: 0px 0px 7px 7px;
+	border-left: 1px solid #BBB;
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	background-color: #ECECEC;
+	background-image: linear-gradient(to top, #E4E4E4, #FFF 100%);
+	background-image: -webkit-linear-gradient(bottom, #E4E4E4, #FFF 100%);
+	background-image: -o-linear-gradient(bottom, #E4E4E4, #FFF 100%);
+	background-image: -ms-linear-gradient(bottom, #E4E4E4, #FFF 100%);
+	background-image: -moz-linear-gradient(bottom, #E4E4E4, #FFF 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#E4E4E4');
+	zoom: 1;
+}
+
+.menubar a.menuitem{
+	width: 100px;
+	font-size: 16px;
+	position: relative;
+	display: block;
+	float: left;
+	padding: 0px 20px;
+	border-radius: 15px;
+	border-left: 1px solid #CCC;
+	color: #464646;
+	line-height: 250%;
+	height: 40px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.8s ease-in-out;
+}
+
+.menubar a.menuitem:hover {
+	color: #ec5300;
+	transition: 0.1s ease-in-out;
+}

@@ -1,21 +1,9 @@
 git init
-
-git add *.*
-
+git reset
+git add -A *.*
 git status
-
 git commit -m 'version'
-
 git remote add svetomag https://github.com/sdmaxim/svetomag.git
-
 git push svetomag master
 git pull svetomag master
-
 git config --global http.proxy http://username:password@cproxy.xxx.com.ua:3128
-
-git rm -r css
-git rm -r jq
-git rm -r spa.js
-git rm -r spa.shell.js
-git rm -r spa-mysql.js
-git rm -r index.html

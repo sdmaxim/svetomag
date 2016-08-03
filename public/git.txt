@@ -1,0 +1,17 @@
+﻿git init
+git add *.*
+git add -all //для удаления чего-либа
+git rm --cache -r node_modules //удаление из локального репозитория
+git status
+git commit -m 'version'
+git remote add japan https://github.com/sdmaxim/japan.git
+git push japan master
+git pull japan master
+git config --global http.proxy http://username:password@cproxy.umc.com.ua:3128
+
+
+для NodeJS:
+npm config set proxy http://"username:password"cproxy.umc.com.ua:3128
+
+npm config set proxy http://"msidich:Otanon33##"cproxy.umc.com.ua:3128
+npm config set https-proxy http://"msidich:Otanon33##"cproxy.umc.com.ua:3128
