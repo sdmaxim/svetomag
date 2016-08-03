@@ -1,2 +1,2 @@
 В разработке...
-Используеться Node.js, MySQL, SPA
+Используеться AngularJS, Node.js, MySQL

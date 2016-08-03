@@ -1,14 +1,3 @@
-.bigimg {
-  background-color: white;
-  float: left;
-  border: 1px solid #bababa;
-  border-radius: 10px;
-  float: left;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
 .thumbs-imgs {
   height: 170px;
   position: relative;
@@ -26,30 +15,36 @@ ul .thumbs-imgs {
 	display: block;
 }
 
-.carousel {
-  border: 1px solid #bababa;
-  border-radius: 10px;
+.film {
   float: left;
   position: relative;
   overflow: hidden;
-  width: 640px;
+  width: 650px;
   height: 150px;
-  margin-bottom: 5px;
-  background: #FFF;
+  background: #000;
+}
+
+.film-top {
+  background-image:url('filmhole.gif');
+  height: 29px;
+  width: 650px;
+  float: left;
 }
 
 .slideshow {
 	width: auto;
-	height: 170px;
+	height: 210px;
   cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .frames {
   width:auto; 
   height: 150px; 
   float: left;
-  border-radius: 7px;
-  margin-left: 2px
+  margin-left: 5px;
+  border-radius: 3px;
 }
 
 .prevbtnimg, .nextbtnimg {
@@ -57,33 +52,36 @@ ul .thumbs-imgs {
   height: 60px;
   line-height: 1;
   color: #d1d1d1;
-  background-color: #333333;
+  background-color: #000;
   text-decoration: none;
   font-family: Arial, sans-serif;
   font-size: 25px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   float: left;
-  margin-top: 45px;
   padding-top: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
 }
 
 .prevbtnimg {
   margin-right: -5px;
   text-indent: 4px;
   border-radius: 15px 0px 0px 15px;
+  margin-bottom: 50px;
+  margin-top: 73px;
 }
 
 .nextbtnimg {
   margin-left: -5px;
   text-indent: 8px;
   border-radius: 0px 15px 15px 0px;
+  margin-top: -107px;
 }
 
 .btn-inside {
   width: 4px;
   height: 45px;
-  background: #4b604b;
+  background: #38ac38;
   float: left;
   margin-top: 5px;
 }
@@ -107,6 +105,7 @@ ul .thumbs-imgs {
   position: absolute;
   color: #d1d1d1;
   background: rgba(152, 169, 0, 0.83);
+  margin-top: 80px;
 }
 
 .nextbtnimg.big {
@@ -132,6 +131,7 @@ ul .thumbs-imgs {
   padding-top: 5px;
   padding-right: 5px;
   padding-bottom: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
 }
 
 .popUpImg-bg {
@@ -181,4 +181,16 @@ ul .thumbs-imgs {
     text-align: center;
     background: #BBBBBB
     margin-bottom: 4px;
+}
+
+.bigimg {
+  background-color: white;
+  float: left;
+  border: 1px solid #bababa;
+  border-radius: 10px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
 }

@@ -4,7 +4,8 @@
 	<a class="prevbtnimg" ng-click="$ctrl.prevImage()">
 		<div class="btn-inside left"></div>
 	</a>
-	<div class="carousel">
+	<div class="film-top"></div>
+	<div class="film">
 		<ul class="thumbs-imgs" style="left:{{$ctrl.shift}}px; width:{{$ctrl.filmWidth}}px">
 			<li ng-repeat="(key, img) in $ctrl.data">
 				<img 	class="frames" 
@@ -15,13 +16,16 @@
 			</li>
 		</ul>
 	</div>
+	<div class="film-top"></div>
 	<a class="nextbtnimg" ng-click="$ctrl.nextImage()">
 		<div class="btn-inside right"></div>
 	</a>
 
 	<div 	class="popUpImg-bg" 
 				ng-if="$ctrl.showPopUpImg">
-		<div class="popUpImg" style="margin-left: {{$ctrl.bigMargine}}px">
+		<div 	class="popUpImg" 
+					style="	margin-left: {{$ctrl.bigMargineLeft}}px; 
+									margin-top: {{$ctrl.bigMargineTop}}px">
 			<div class="close" ng-click="$ctrl.closePopUp()">x</div>
 			<div class="popUpMsg">{{$ctrl.getTitle()}}</div>
 			<a 	class="prevbtnimg big" 

@@ -16,12 +16,13 @@ angular.
         var bigInd = 0; //Индек больших картинок
         var showenFramesL = 0; //Длина видимых кадров
         var counter = 0; //Счетчик кадров
-        var showWindowW = 640; //Ширина окна показа ленты
-        var space = 2; //Расстояние между кадрами
+        var showWindowW = 645; //Ширина окна показа ленты
+        var space = 5; //Расстояние между кадрами
         var cursor = 0; //Направление движения
         var delta = 0; //Текущая величина сдвига ленты
         self.shift = 0; //Общий сдвиг ленты
-        self.bigMargine = 150; //Отступ от левого края для больших картинок
+        self.bigMargineLeft = 0; //Отступ от левого края для больших картинок
+        self.bigMargineTop = 0; //Отступ от левого края для больших картинок
 
         GetData.get({filename: $routeParams.pageId}, function(images) {
           self.data = images.data;
@@ -49,13 +50,15 @@ angular.
             var imgBig = new Image();
             imgBig.onload = function() {
               self.data[counter].widthBig = this.width;
+              self.data[counter].heightBig = this.height;
             }
             imgBig.src = self.getFullImgPath(counter, "big");
           });
         });
 
         var getbigMargine = function () {
-          self.bigMargine = (window.innerWidth-self.data[bigInd].widthBig) / 2;
+          self.bigMargineLeft = (window.innerWidth-self.data[bigInd].widthBig) / 2;
+          self.bigMargineTop = (window.innerHeight-self.data[bigInd].heightBig) / 2 - 15;
         }
         
         self.nextImage = function () {
@@ -174,6 +177,7 @@ angular.
 
         self.openPopUp = function( imgId ) {
           bigInd = imgId;
+          getbigMargine();
           self.showPopUpImg = true;
         }
       }

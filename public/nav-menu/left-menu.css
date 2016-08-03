@@ -31,12 +31,10 @@
 }
 
 .leftmenu a.menuitem:hover{
-	color: #ec00da;
-	transition: 0.2s ease-in-out;
-  -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon6 1.5s ease-in-out infinite alternate;
-  animation: neon6 1.5s ease-in-out infinite alternate;
+	color: #FF6E00;
+	transition: 0.05s ease-in-out;
   padding-left: 20px;
+  height:25px;
 }
 
 .module-header {
