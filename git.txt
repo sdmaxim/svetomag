@@ -6,4 +6,5 @@ git commit -m 'version'
 git remote add svetomag https://github.com/sdmaxim/svetomag.git
 git push svetomag master
 git pull svetomag master
+git rm -r -f node_modules - рекурсивное и форсированное удаление каталога из git
 git config --global http.proxy http://username:password@cproxy.xxx.com.ua:3128
