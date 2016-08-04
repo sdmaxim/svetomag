@@ -18,7 +18,7 @@
 	<script src="angular/angular-resource.min.js"></script>
 	<script src="angular/angular-route.min.js"></script>
 
-	<script type="text/javascript" src="gulliver-m.js"></script>
+	<script type="text/javascript" src="main.js"></script>
 	<script type="text/javascript" src="core/core-m.js"></script>
 	<script type="text/javascript" src="core/getdata/getdata-m.js"></script>
 	<script type="text/javascript" src="core/getdata/getdata-s.js"></script>
@@ -62,9 +62,11 @@
 				</div>
 				<div class="page-title">Превращаем маленькие события в БОЛЬШИЕ!</div>
 			</div>
-			<auth class="auth"></auth>
 			<nav-menu menu-type="top-menu"></nav-menu>
-			<nav-menu menu-type="left-menu" class="leftcol"></nav-menu>
+			<div class="leftcol">
+				<login class="login"></login>
+				<nav-menu menu-type="left-menu" class="left-menu"></nav-menu>
+			</div>
 			<div ng-view class="content"></div>
 		</div>
 	</div>

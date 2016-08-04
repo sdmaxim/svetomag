@@ -4,5 +4,6 @@
 angular.module('gulliverApp', [
 	'core',
   'navMenu',
-  'middle'
+  'middle',
+  'login'
 ]);

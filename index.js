@@ -42,7 +42,7 @@ router.get('/logout', function(req, res){
   // destroy the user's session to log them out
   // will be re-created next request
   req.session.destroy(function(){
-    res.redirect('/');
+    auth.getLoginStatus(req, res);
   });
 });
 
@@ -55,6 +55,7 @@ router.post('/login', function(req, res){
     if (user) {
       // Regenerate session when signing in
       // to prevent fixation
+
       req.session.regenerate(function(){
         // Store the user's primary key
         // in the session store to be retrieved,
@@ -63,13 +64,13 @@ router.post('/login', function(req, res){
         req.session.success = 'Authenticated as ' + user.name
           + ' click to <a href="/logout">logout</a>. '
           + ' You may now access <a href="/restricted">/restricted</a>.';
-        res.redirect('back');
+        auth.getLoginStatus(req, res);
       });
     } else {
       req.session.error = 'Authentication failed, please check your '
         + ' username and password.'
         + ' (use "tj" and "foobar")';
-      res.redirect('/login');
+      auth.getLoginStatus(req, res);
     }
   });
 });

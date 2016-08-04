@@ -1,17 +1,12 @@
 <div class="module-header">
 	<h3>Login</h3>
 </div>
-Try accessing 
-<a href="/restricted"> /restricted</a>
-<br>
-then authenticate with "tj" and "foobar".
-<form method='post', action='/login'>
-  <p>Username:</p>
-    <input type='text', name='username'>
-  <p>Password:</p>
-    <input type='text', name='password'>
-  <p>
-  	<input type='submit', value='Login'>
-  </p>
-</form>
-<a href="">home</a>
+<div class="login-module">
+	authenticate with "tj" and "foobar".<br>
+	{{$ctrl.loginStatus}}<br>
+  Username: <input type='text', name='username' ng-model="$ctrl.username">
+  Password: <input type='text', name='password' ng-model="$ctrl.password">
+	<button ng-click="$ctrl.login()">Login</button>
+	<button ng-click="$ctrl.logout()">Logout</button>
+</div>
+<div class="module-footer"></div>

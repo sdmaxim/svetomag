@@ -1,2 +1,2 @@
 В разработке...
-Используеться AngularJS, Node.js, MySQL
+Используеться AngularJS, Node.js, Express, MySQL

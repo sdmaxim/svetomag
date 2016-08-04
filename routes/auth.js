@@ -77,10 +77,14 @@ var restrict = function(req, res, next) {
 }
 
 var getLoginStatus = function(req, res) {
-  var status = 'logged in false';
-  if (req.session.user) {
-    status = 'logged in true';
+  var status = 'logged out';
+  if (req.session) {
+    if (req.session.user) {
+      status = 'logged in as ' + req.session.user.name;
+    }
   }
+  
+  console.log(status);
   res.send(200, {
     auth : status
   });
