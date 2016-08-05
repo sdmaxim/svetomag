@@ -7,18 +7,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 
-var counter = require('./routes/index');
-var users = require('./routes/users');
-var hits = require('./routes/hits');
-var auth = require('./routes/auth');
+var auth = require('./server/auth');
 
 var app = express();
 var router = express.Router();
-
-// config
-
-app.set('view engine', 'jade');
-app.set('views', path.join(__dirname, 'views'));
 
 // middleware
 
@@ -46,10 +38,6 @@ router.get('/logout', function(req, res){
   });
 });
 
-router.get('/login', function(req, res){
-  res.render('login');
-});
-
 router.post('/login', function(req, res){
   auth.authenticate(req.body.username, req.body.password, function(err, user){
     if (user) {
@@ -75,10 +63,6 @@ router.post('/login', function(req, res){
   });
 });
 
-router.use('/counter', counter);
-router.use('/users', users);
-router.get('/hits', hits.count);
-router.post('/hit', hits.registerNew);
 router.get('/auth', auth.getLoginStatus);
 
 // Session-persisted message middleware
