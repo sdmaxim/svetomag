@@ -4,7 +4,7 @@ angular.
   module('slideShow')
   .component('slideShow', {
     templateUrl: 'slideshow/slideshow.html',
-    controller: ['$routeParams', 'GetData', function ($routeParams, GetData) {
+    controller: ['$routeParams', 'GetJSONFile', function ($routeParams, GetJSONFile) {
         var self = this;
         self.data = []; //Список картинок и свойств
         var fullPath = ""; //Полный путь к файлу без ID
@@ -24,7 +24,7 @@ angular.
         self.bigMargineLeft = 0; //Отступ от левого края для больших картинок
         self.bigMargineTop = 0; //Отступ от левого края для больших картинок
 
-        GetData.get({filename: $routeParams.pageId}, function(images) {
+        GetJSONFile.get({filename: $routeParams.pageId}, function(images) {
           self.data = images.data;
           length = self.data.length;
           end = length-1;

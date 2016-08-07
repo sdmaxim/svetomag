@@ -6,9 +6,9 @@ angular.
     templateUrl: ['$element', '$attrs', function($element, $attrs) {
       return 'nav-menu/' + $attrs.menuType + '.html';
     }],
-    controller: ['$element', '$attrs', 'GetData', function ($element, $attrs, GetData) {
+    controller: ['$element', '$attrs', 'GetJSONFile', function ($element, $attrs, GetJSONFile) {
         var self = this;
-        self.db = GetData.get({filename: $attrs.menuType}, function() {
+        self.db = GetJSONFile.get({filename: $attrs.menuType}, function() {
           self.menuItems = self.db.list;
           self.category = self.db.category;
         });

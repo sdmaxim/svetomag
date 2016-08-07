@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('login', ['core.getdata']);
+angular.module('login', ['core.auth']);
