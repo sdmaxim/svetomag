@@ -1,1 +1,0 @@
-angular.module('core.getJsonFile', ['ngResource']);

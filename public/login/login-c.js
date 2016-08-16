@@ -19,6 +19,5 @@ angular.
         self.loginStatus = data;
       });
     };
-
   }]
 });

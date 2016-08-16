@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('content', ['slideShow']);
+angular.module('content', []);

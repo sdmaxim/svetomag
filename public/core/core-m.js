@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('core', ['core.getJsonFile', 'core.getJson', 'core.auth']);
+angular.module('core', ['core.getJson', 'core.auth', 'core.db']);

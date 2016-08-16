@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('navMenu', ['core.getJsonFile']);
+angular.module('navMenu', ['core.getJson', 'core.db']);

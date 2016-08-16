@@ -4,11 +4,13 @@
 	 "folder_exclude_patterns": [
 		"node_modules",
 		"public/angular",
+		"privat"
 	 ],
 	 "path": ".",
 	 "file_exclude_patterns": [
 		"pull.bat",
 		"push.bat",
+		"server.bat",
 		"git.txt",
 		".gitignore",
 		"package.json",
