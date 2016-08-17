@@ -2,35 +2,30 @@ angular.
   module('core.db')
   .factory('Db', ['$q', '$http', function($q, $http){
     return {
-      getProd : function (prodId){
+      getProd : function (id){
         var d = $q.defer();
-        console.log("clien - id", prodId);
+        console.log("Prod - id", id);
 
-        $http.post('/get-prod', {
-          prodId : prodId
-        })
+        $http.post('/get-prod', {id : id})
         .success(function(data, status) { d.resolve(data); })
           .error(function(data, status) { d.reject(data); });
         return d.promise;
       },
-      getProdList : function (catId){
+      getCategory : function (id){
         var d = $q.defer();
-        console.log("clien - id", catId);
+        console.log("Category - id", id);
 
-        $http.post('/get-prod-list', {
-          catId : catId
-        })
+        $http.post('/get-category', {id : id})
         .success(function(data, status) { d.resolve(data); })
           .error(function(data, status) { d.reject(data); });
         return d.promise;
       },
-      getMenu : function (menuType){
+      getMenu : function (id){
         var d = $q.defer();
-        console.log("clien - id", menuType);
+        if (!id) id = 0;
+        console.log("Menu - id", id);
 
-        $http.post('/get-menu', {
-          menuType : menuType
-        })
+        $http.post('/get-menu', {id : id})
         .success(function(data, status) { d.resolve(data); })
           .error(function(data, status) { d.reject(data); });
         return d.promise;

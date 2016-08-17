@@ -33,61 +33,55 @@ app.use(session({
 }));
 app.use(cookieParser());
 
+//List of static folders
 app.use(express.static(path.join(__dirname, '/../public')));
 app.use(express.static(path.join(__dirname, '/data')));
-app.use(router); //Связь между app и router
+app.use(router); //Connection between app & router
 
 router.get('/restricted', auth.restrict, function(req, res){
   res.send('Wahoo! restricted area, click to <a href="/logout">logout</a>');
 });
 
 router.get('/logout', function(req, res){
-  // destroy the user's session to log them out
-  // will be re-created next request
   req.session.destroy(function(){
     auth.getLoginStatus(req, res);
   });
 });
 
-router.get('/json/*.json', function(req, res){
-  // destroy the user's session to log them out
-  // will be re-created next request
-  console.log("***");
-});
-
-router.post('/get-prod', function(req, res){
-  var prodId = req.body.prodId;
+router.post('/get-category', function(req, res){
+  var id = req.body.id;
+  console.log(id);
   mysql_connection.query(
-    'SELECT product_id, product_name FROM product LIMIT 0, ' + msg,
+    'SELECT product.name, product.id ' +
+    'FROM product, product_category_xref ' +
+    'WHERE (product_category_xref.category_id = "' + id + '") AND ' +
+    '(product_category_xref.product_id = product.id) LIMIT 0, 15',
     function (err, rows) {
-
-        if (err) throw err;
-        console.log(rows);
-        res.send(rows);
-        res.end();
-        //mysql_connection.end();
+      if (err) throw err;
+      console.log(rows);
+      res.send(rows);
+      res.end();
+      //mysql_connection.end();
     }
   );
-  console.log(msg);
+  //console.log(msg);
 });
 
 router.post('/get-menu', function(req, res){
-  var menuType = req.body.menuType;
+  var id = req.body.id;
   mysql_connection.query(
     'SELECT category.name, category.id, category.url ' +
     'FROM category, category_xref ' +
-    'WHERE (category_xref.parent_id = "0") AND ' +
+    'WHERE (category_xref.parent_id = "' + id + '") AND ' +
     '(category_xref.child_id = category.id) LIMIT 0, 15',
     function (err, rows) {
-
-        if (err) throw err;
-        console.log(rows);
-        res.send(rows);
-        res.end();
-        //mysql_connection.end();
+      if (err) throw err;
+      //console.log(rows);
+      res.send(rows);
+      res.end();
+      //mysql_connection.end();
     }
   );
-  console.log(menuType + "+++");
 });
 
 router.post('/login', function(req, res){

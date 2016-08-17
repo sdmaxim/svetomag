@@ -29,7 +29,6 @@
 
 	<link rel="stylesheet" href="nav-menu/top-menu.css" type="text/css" />
 	<link rel="stylesheet" href="nav-menu/left-menu.css" type="text/css" />
-	<link rel="stylesheet" href="nav-menu/middle-menu.css" type="text/css" />
 	<script type="text/javascript" src="nav-menu/nav-menu-m.js"></script>
 	<script type="text/javascript" src="nav-menu/nav-menu-c.js"></script>
 
@@ -45,6 +44,13 @@
 	<script type="text/javascript" src="middle/content/content-m.js"></script>
 	<script type="text/javascript" src="middle/content/content-c.js"></script>
 
+	<link rel="stylesheet" href="middle/category-list/category-list.css" type="text/css" />
+	<script type="text/javascript" src="middle/category-list/category-list-m.js"></script>
+	<script type="text/javascript" src="middle/category-list/category-list-c.js"></script>
+
+	<link rel="stylesheet" href="middle/product-list/product-list.css" type="text/css" />
+	<script type="text/javascript" src="middle/product-list/product-list-m.js"></script>
+	<script type="text/javascript" src="middle/product-list/product-list-c.js"></script>
 </head>
 
 <body>
@@ -52,8 +58,8 @@
 		<div class="main">
 			<div class="header">
 				<div class="logo">
-					<div class="logo-text-big">ГУЛЛИВЕР</div>
-					<div class="logo-text-small">Студия праздников</div>
+					<div class="logo-text-big">СветоМАГ</div>
+					<div class="logo-text-small">Магазин светотехники</div>
 				</div>
 				<div class="phones">
 					<div class="phones-text">(044) 223-46-19</div>
@@ -65,7 +71,7 @@
 			<nav-menu menu-type="top-menu"></nav-menu>
 			<div class="leftcol">
 				<login class="login"></login>
-				<nav-menu menu-type="left-menu" class="left-menu"></nav-menu>
+				<nav-menu menu-type="left-menu" class="left-menu" level="0"></nav-menu>
 			</div>
 			<div ng-view class="content"></div>
 		</div>

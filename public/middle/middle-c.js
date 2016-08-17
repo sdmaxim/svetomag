@@ -7,10 +7,17 @@ angular.
       $locationProvider.hashPrefix('!');
       $routeProvider.
         when('/', {
-          template: '<nav-menu menu-type="middle-menu"></nav-menu>'
+          templateUrl: 'info/first-page.html'
         }).
-        when('/:pageType/:pageId.html', {
+        when('/info/:pageName.html', {
           template: '<content></content>'
+        }).
+        when('/category/:id/:name', {
+          template: '<category-list></category-list>' + 
+                    '<product-list></product-list>'
+        }).
+        when('/product/:id/:name', {
+          template: '<product></product>'
         }).
         otherwise('/');
     }

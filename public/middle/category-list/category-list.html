@@ -1,0 +1,11 @@
+  prodId: <input type='text', name='username' ng-model="$ctrl.prodId">
+	<button ng-click="$ctrl.getProd($ctrl.prodId)">prodId</button>
+	{{$ctrl.prodList}}
+<ul>
+  <li ng-repeat="menuItem in $ctrl.menuItems">
+  	<a class="menuitem" href="#!/{{$ctrl.category}}/{{menuItem.url}}">
+  		<span class="text">{{menuItem.category_name}}</span>
+  		<img ng-src="images/middle_menu/{{menuItem.img}}"></img>
+  	</a>
+  </li>
+</ul>

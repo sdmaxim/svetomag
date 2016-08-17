@@ -3,5 +3,7 @@
 angular.module('middle', [
 	'ngRoute',
 	'navMenu',
-	'content'
+	'content',
+	'categoryList',
+	'productList'
 ]);

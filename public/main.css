@@ -2,7 +2,7 @@ body{
 	background:#393939;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:12px;
-	line-height:100%;
+	line-height:120%;
 	color:#444444;
 	margin:0;
 	padding:0;
@@ -160,4 +160,31 @@ h3{
 	line-height: 115%;
 	font-size: 12pt;
 	text-align: left;
+}
+
+.paragraf_name {
+	font-size: 12px;
+  float: left;
+  text-align: center;
+  position: relative;
+  height: 22px;
+  width: 100%;
+  border: 1px solid #B9B9B9;
+  padding-top: 3px;
+  border-radius: 7px;
+  background: #E7E7E7;
+  background-image: linear-gradient(to top, #E4E4E4, #FFF 100%);
+  background-image: -webkit-linear-gradient(bottom, #E4E4E4, #FFF 100%);
+  background-image: -o-linear-gradient(bottom, #E4E4E4, #FFF 100%);
+  background-image: -ms-linear-gradient(bottom, #E4E4E4, #FFF 100%);
+  background-image: -moz-linear-gradient(bottom, #E4E4E4, #FFF 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#E4E4E4');
+}
+
+.white_block {
+
+}
+
+.blue_block {
+	
 }
