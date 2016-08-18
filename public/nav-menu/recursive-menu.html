@@ -1,0 +1,8 @@
+<ul class="leftmenu">
+  <li ng-repeat="menuItem in $ctrl.menuItems">
+  	<a class="menuitem" href="#!/category/{{menuItem.id}}/{{menuItem.url}}">
+  		<span class="text">{{menuItem.name}}</span>
+  	</a>
+  	<recursive-menu level='{{menuItem.id}}' ng-hide='$ctrl.show'></recursive-menu>
+  </li>
+</ul>

@@ -4,7 +4,7 @@ angular.
     return {
       getProd : function (id){
         var d = $q.defer();
-        console.log("Prod - id", id);
+        //console.log("Prod - id", id);
 
         $http.post('/get-prod', {id : id})
         .success(function(data, status) { d.resolve(data); })
@@ -13,7 +13,7 @@ angular.
       },
       getCategory : function (id){
         var d = $q.defer();
-        console.log("Category - id", id);
+        //console.log("Category - id", id);
 
         $http.post('/get-category', {id : id})
         .success(function(data, status) { d.resolve(data); })
@@ -23,7 +23,7 @@ angular.
       getMenu : function (id){
         var d = $q.defer();
         if (!id) id = 0;
-        console.log("Menu - id", id);
+        //console.log("Menu - id", id);
 
         $http.post('/get-menu', {id : id})
         .success(function(data, status) { d.resolve(data); })

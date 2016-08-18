@@ -1,16 +1,5 @@
 <div class="module-header">
 	<h3>МАГазин</h3>
 </div>
-<ul class="leftmenu">
-  <li ng-repeat="menuItem in $ctrl.menuItems">
-  	<a class="menuitem" href="#!/category/{{menuItem.id}}/{{menuItem.url}}">
-  		<span class="text">{{menuItem.name}}</span>
-  	</a>
-  	<nav-menu menu-type="left-menu" 
-  						class="left-menu" 
-  						level="$ctrl.level" 
-  						ng-if="$ctrl.show">
-  	</nav-menu>
-  </li>
-</ul>
+<recursive-menu level='0'></recursive-menu>
 <div class="module-footer"></div>

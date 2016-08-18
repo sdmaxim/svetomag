@@ -6,19 +6,9 @@ angular.
     templateUrl: ['$attrs', function($attrs) {
       return 'nav-menu/' + $attrs.menuType + '.html';
     }],
-    controller: ['$attrs', '$scope', 'Db', 'GetJSON', '$routeParams', 
-      function ($attrs, $scope, Db, GetJSON, $routeParams) {
+    controller: ['$attrs', 'GetJSON', 
+      function ($attrs, GetJSON) {
         var self = this;
-        var renderMenu = function() {
-          self.level = $attrs.level + 1;
-          self.show = 0;
-          console.log(self.level + " " + $attrs.menuType);
-          self.db = Db.getMenu($routeParams.id).then(function(data) {
-            self.menuItems = data;
-            self.prodList = data;
-            //if (!data || self.level > 1) self.show = 0; else self.show = 1;
-          });
-        };
         switch($attrs.menuType) {
           case "top-menu" : 
             self.db = GetJSON.get({filename: $attrs.menuType}, function() {
@@ -26,11 +16,32 @@ angular.
               self.category = self.db.category;
             });
           break;
-          case "left-menu" : 
-            renderMenu();
-            $scope.$on('$routeChangeSuccess', renderMenu);
-          break;
         }
+      }
+    ]
+  })
+  .component('recursiveMenu', {
+    templateUrl : 'nav-menu/recursive-menu.html',
+    bindings: {
+      'level' : '@'
+    },
+    controller: ['$scope', 'Db', '$routeParams', 
+      function ($scope, Db, $routeParams) {
+        var self = this;
+        self.show = 0;
+        //Нужно с сервера получать правильный json чтобы сразу его рисовать
+        //А уже json рекурсивно отображать
+        if (!$routeParams.id) $routeParams.id = 0;
+        var renderMenu = function() {
+          self.db = Db.getMenu(self.level).then(function(data) {
+            self.menuItems = data;
+            self.prodList = data;
+             console.log($routeParams.id + " " + self.level);
+            if ($routeParams.id == self.level) self.show = 1; else self.show = 0;
+          });
+        };
+        renderMenu();
+        $scope.$on('$routeChangeSuccess', renderMenu);
       }
     ]
   });
